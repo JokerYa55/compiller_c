@@ -2,6 +2,7 @@ package app.main;
 
 import app.lexx.Lexer;
 import app.syntactical_analyzer.syntactial_tree.LexerTreeBuilder;
+import app.syntactical_analyzer.syntactial_tree.ProgramBlock;
 import java.io.File;
 import java.io.FileReader;
 import org.slf4j.Logger;
@@ -19,7 +20,8 @@ public class Main {
             LOG.info("tokens = {}", lex.getTokenList());
             // Запускаем 
             LexerTreeBuilder lexerBuilder = new LexerTreeBuilder();
-            lexerBuilder.build(lex.getTokenList());
+            ProgramBlock program = lexerBuilder.build(lex.getTokenList());
+            
         } catch (Exception e) {            
             LOG.error(e.getMessage());
         }

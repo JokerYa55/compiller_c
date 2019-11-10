@@ -48,7 +48,7 @@ public class LexerTreeBuilder {
      * Получаем операнд
      *
      * @return
-     */
+        */
     private List<Token> getExp() {
         List<Token> result = new ArrayList<>();
         while (listToken.get(currentIndex).getSymType() != TokenType.SEMICOLON) {
