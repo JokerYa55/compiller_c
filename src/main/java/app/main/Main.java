@@ -21,7 +21,7 @@ public class Main {
             // Запускаем 
             LexerTreeBuilder lexerBuilder = new LexerTreeBuilder();
             ProgramBlock program = lexerBuilder.build(lex.getTokenList());
-            
+            LOG.info(String.format("program = %s", program));
         } catch (Exception e) {            
             LOG.error(e.getMessage());
         }

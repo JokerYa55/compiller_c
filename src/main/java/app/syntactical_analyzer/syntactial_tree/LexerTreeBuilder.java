@@ -56,6 +56,7 @@ public class LexerTreeBuilder {
             currentIndex++;
         }
         LOG.info(String.format("result = %s", result));
+        mainBlock.addNode(node)
         return result;
     }
 
